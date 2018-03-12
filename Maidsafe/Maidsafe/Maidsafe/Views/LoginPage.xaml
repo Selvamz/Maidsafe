@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Maidsafe"
+             Title="Login Page"
+             x:Class="Maidsafe.LoginPage">
+
+    <StackLayout Orientation="Vertical" Margin="2,20,2,2">
+        <StackLayout Orientation="Horizontal" Margin="10">
+            <Label Text="Username:" Margin="2, 8, 2, 2" FontSize="Medium" />
+            <Entry Text="{Binding Username, Mode=TwoWay}" Margin="2" FontSize="Medium"
+                               HorizontalOptions="FillAndExpand" WidthRequest="150"/>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal" Margin="10">
+            <Label Text="Password:" Margin="2, 8, 2, 2" FontSize="Medium" />
+            <Entry Text="{Binding Password, Mode=TwoWay}" Margin="2" FontSize="Medium" IsPassword="True"
+                               HorizontalOptions="FillAndExpand" WidthRequest="150"/>
+        </StackLayout>
+        <Button x:Name="LoginBtn" BackgroundColor="#FF007ACC" TextColor="White"  Margin="10"
+                        Text="Login" Command="{Binding LoginCommand}"
+                        HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+    </StackLayout>
+</ContentPage>
